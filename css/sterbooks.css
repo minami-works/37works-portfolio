@@ -1,24 +1,7 @@
-@charset "UTF-8";
-
-// カラー
-$color-accent: #d1a6cb;
-$color-bg: #1e2d4f;
-$color-card: #253354;
-$color-text: #e8dff0;
-$color-sub: #8e97b8;
-$color-border: #3a4f7a;
-$color-fiction-bg: #1a3a2a;
-$color-fiction-text: #7ecba5;
-
-// フォント
-$font-en: "Exo 2", sans-serif;
-$font-display: "Syne", sans-serif;
-$font-ja: "Noto Sans JP", sans-serif;
-
 body {
-  font-family: $font-ja;
-  background-color: $color-bg;
-  color: $color-text;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #1e2d4f;
+  color: #e8dff0;
 }
 
 /* header */
@@ -37,10 +20,10 @@ header {
 }
 
 .header__logo-num {
-  font-family: $font-en;
+  font-family: "Exo 2", sans-serif;
   font-weight: 900;
   font-size: 18px;
-  color: $color-accent;
+  color: #d1a6cb;
   letter-spacing: 0.08em;
 }
 
@@ -54,14 +37,14 @@ header {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: $color-accent;
+  background-color: #d1a6cb;
 }
 
 .header__logo-txt {
-  font-family: $font-display;
+  font-family: "Syne", sans-serif;
   font-weight: 700;
   font-size: 7px;
-  color: $color-sub;
+  color: #8e97b8;
   letter-spacing: 0.38em;
 }
 
@@ -69,22 +52,23 @@ header {
   display: none;
 }
 
-label[for="nav__toggle"] {
+label[for=nav__toggle] {
   display: none;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  label[for=nav__toggle] {
     display: block;
   }
 }
 
-.nav {
-  @media (max-width: 640px) {
+@media (max-width: 640px) {
+  .nav {
     display: none;
   }
 }
 
-#nav__toggle:checked ~ .nav {
-  @media (max-width: 640px) {
+@media (max-width: 640px) {
+  #nav__toggle:checked ~ .nav {
     display: block;
   }
 }
@@ -92,31 +76,31 @@ label[for="nav__toggle"] {
 .nav__link-list {
   display: flex;
   gap: 28px;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .nav__link-list {
     flex-direction: column;
   }
 }
 
 .nav__link-list a {
-  font-family: $font-display;
+  font-family: "Syne", sans-serif;
   font-size: 11px;
-  color: $color-sub;
+  color: #8e97b8;
   text-decoration: none;
   letter-spacing: 0.1em;
 }
 
-// hero
 .hero {
-  background: $color-card;
+  background: #253354;
   padding: 3rem 3rem 2.5rem;
-  border-bottom: 0.5px solid $color-border;
+  border-bottom: 0.5px solid #3a4f7a;
   text-align: center;
 }
 
 .hero__back {
   font-size: 12px;
-  color: $color-sub;
+  color: #8e97b8;
   text-decoration: none;
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -124,21 +108,39 @@ label[for="nav__toggle"] {
 }
 
 .hero__label {
-  font-family: $font-en;
+  font-family: "Exo 2", sans-serif;
   font-size: 11px;
   letter-spacing: 0.2em;
-  color: $color-accent;
+  color: #d1a6cb;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
 }
 
 .hero__title {
-  font-family: $font-en;
+  font-family: "Noto Serif JP", serif;
   font-size: 52px;
   font-weight: 600;
-  color: $color-text;
+  color: #e8dff0;
   line-height: 1.1;
   margin-bottom: 0.4rem;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: #d1a6cb;
+}
+
+.hero__sub {
+  font-family: "Noto Serif JP", serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #8e97b8;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 640px) {
+  .hero__sub {
+    font-size: 16px;
+  }
 }
 
 .hero__tag-list {
@@ -146,8 +148,9 @@ label[for="nav__toggle"] {
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .hero__tag-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -155,27 +158,26 @@ label[for="nav__toggle"] {
 
 .hero__tag,
 .content__tech-item {
-  font-family: $font-en;
+  font-family: "Exo 2", sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   padding: 4px 14px;
   border-radius: 20px;
-  color: $color-sub;
-  border: 0.5px solid $color-border;
+  color: #8e97b8;
+  border: 0.5px solid #3a4f7a;
 }
 
 .hero__tag--responsive {
-  color: $color-accent;
-  border-color: $color-accent;
+  color: #d1a6cb;
+  border-color: #d1a6cb;
 }
 
-.hero__tag--practice {
-  color: $color-sub;
-  border-color: $color-sub;
-  background: rgba(124, 134, 169, 0.08);
+.hero__tag--fiction {
+  color: #7ecba5;
+  border-color: #7ecba5;
+  background: #1a3a2a;
 }
 
-// main
 .content {
   max-width: 900px;
   margin: 0 auto;
@@ -183,12 +185,13 @@ label[for="nav__toggle"] {
 }
 
 .content__section-label {
-  font-family: $font-display;
+  font-family: "Noto Serif JP", serif;
   font-size: 20px;
+  font-style: italic;
   letter-spacing: 0.08em;
-  color: #ff8ad6;
+  color: #d8cfc4;
   margin-bottom: 16px;
-  text-transform: uppercase;
+  position: relative;
 }
 
 .content__section-label::after {
@@ -196,19 +199,41 @@ label[for="nav__toggle"] {
   display: block;
   width: 30px;
   height: 1px;
-  background: #ff8ad6;
+  background: #d8cfc4;
   margin-top: 10px;
+  opacity: 0.6;
 }
 
 .content__section-txt,
 .content__tech-item,
 .content__link-list {
-  font-size: 12px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 14px;
   line-height: 2;
-  color: $color-text;
+  color: #e0d8cf;
 }
 
-// design
+.content__thumbnail {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 0.5px solid #3a4f7a;
+  margin-bottom: 2.5rem;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.content__img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .content__section-design {
   display: flex;
   gap: 24px;
@@ -231,7 +256,6 @@ label[for="nav__toggle"] {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-// highlights
 .content__point-item {
   display: flex;
   gap: 10px;
@@ -254,6 +278,36 @@ label[for="nav__toggle"] {
   list-style: none;
 }
 
+/* links */
+.content__link-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.content__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.content__link--site {
+  background: #d1a6cb;
+  color: #253354;
+}
+
+.content__link--github {
+  background: transparent;
+  color: #d1a6cb;
+  border: 0.5px solid #d1a6cb;
+}
+
 /* footer */
 footer {
   padding: 24px 40px;
@@ -265,5 +319,6 @@ footer {
 
 .footer__copy {
   font-size: 10px;
-  color: $color-sub;
+  color: #8e97b8;
 }
+/*# sourceMappingURL=sterbooks.css.map */

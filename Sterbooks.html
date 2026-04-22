@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="37Works">
-    <title>37 Works | 37Works</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="北海道在住のコーダー・Minamiのポートフォリオサイト。HTML/CSS/SCSSを使った模写・オリジナルコーディング作品を掲載しています。">
+    <meta name="description" content="架空のブックカフェ「Ster Books」のモバイルファーストWebサイト。FigmaカンプからのコーディングでSCSS・BEM設計を使用しています。">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;800;900&family=Syne:wght@700;800&family=Noto+Sans+JP:wght@400;500&display=swap"
         rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap"
+      rel="stylesheet"
+    /> 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/37works.css">
+    <link rel="stylesheet" href="css/sterbooks.css">
+    <title>37 Works | Ster Books</title>
 </head>
 
 <body>
@@ -47,98 +50,87 @@
             </ul>
         </nav>
     </header>
-    <main>
 
+    <main>
         <section class="hero">
             <a href="index.html" class="hero__back">←Works 一覧へ戻る</a>
             <p class="hero__label">Original Work</p>
-            <h1 class="hero__title">37 Works</h1>
+            <h1 class="hero__title">Ster Books</h1>
             <ul class="hero__tag-list">
                 <li class="hero__tag">HTML</li>
                 <li class="hero__tag">CSS</li>
-                <li class="hero__tag">JavaScript</li>
                 <li class="hero__tag hero__tag--responsive">Responsive</li>
-                <li class="hero__tag hero__tag--original">Original</li>
+                <li class="hero__tag hero__tag--fiction">架空サイト</li>
             </ul>
         </section>
-                <div class="content">
-            <div class="content__thumbnail">
-                <img src="img/37works-hero.png" alt="37works" class="content__img">
-            </div>
         <div class="content">
+            <div class="content__thumbnail">
+                <img src="img/sterbooks-hero.png" alt="Ster Books" class="content__img">
+            </div>
             <div class="content__section">
                 <p class="content__section-label">About</p>
-                <p class="content__section-txt">
-                    自分自身の名刺となるよう、スキルや制作物を整理して伝えることを目的に制作したポートフォリオサイトです。<br>
-                    フューチャーピンクをテーマカラーに、色・余白・タイポグラフィで統一感と個性を表現しました。<br>
-                    シンプルな構成と導線設計により、直感的に作品へアクセスできる設計にしています。
-                </p>
+                <p class="content__section-txt">コーヒーを片手に好きな本を楽しめる、カフェ併設型書店「Ster Books」のWebサイトを制作しました。<br>
+                    落ち着いた空間や読書体験の心地よさが伝わるよう、余白やタイポグラフィを意識したデザインを再現しています。</p>
             </div>
-
             <div class="content__section">
                 <p class="content__section-label">Purpose</p>
-                <p class="content__section-txt">
-                    自身のスキルや制作物を整理し、クライアントや採用担当者に伝わる構成を意識して制作しました。<br>
-                    直感的に作品へアクセスできる導線設計と、視認性の高いレイアウトを重視しています。
-                </p>
+                <p class="content__section-txt">Figmaのデザインカンプをもとに、実務を想定したコーディング力の向上を目的として制作しました。<br>
+特に「設計」「保守性」「レスポンシブ対応」を意識し、再利用しやすい構造で実装することを重視しています。</p>
             </div>
-
             <div class="content__section">
                 <p class="content__section-label">Design</p>
+
                 <div class="content__section-design">
-                    <img src="img/37works-pc.png" alt="PCデザイン" class="content__section-design-img">
-                    <img src="img/37works-sp.png" alt="スマホデザイン" class="content__section-design-img-sp">
+                    <img src="img/sterbooks-pc.png" alt="PCデザイン" class="content__section-design-img">
+                    <img src="img/sterbooks-sp.png" alt="スマホデザイン" class="content__section-design-img-sp">
                 </div>
             </div>
-
             <div class="content__section">
                 <p class="content__section-label">Highlights</p>
                 <ul class="content__point-list">
                     <li class="content__point-item">
                         <span class="content__point-dot"></span>
-                        <span class="content__section-txt">カラーパレットと余白を細かく調整し、他にないビジュアルの個性を意識してデザイン</span>
+                        <span
+                            class="content__section-txt">Figmaカンプから余白・文字サイズ・行間の数値を正確に読み取り、忠実に再現</span>
                     </li>
                     <li class="content__point-item">
                         <span class="content__point-dot"></span>
-                        <span class="content__section-txt">JavaScriptに初挑戦し、タイピングアニメーションとスクロールフェードインを実装</span>
+                        <span
+                            class="content__section-txt">画像はFigmaから書き出し、各デバイスに適したサイズで配置</span>
                     </li>
                     <li class="content__point-item">
                         <span class="content__point-dot"></span>
-                        <span class="content__section-txt">オリジナル作品はGitHubリポジトリを公開し、コードまで見てもらえる構成に</span>
+                        <span class="content__section-txt">モバイルファーストで設計し、各デバイスで自然なレイアウトになるよう調整 </span>
                     </li>
                 </ul>
             </div>
-
-            <div class="content__section">
-                <p class="content__section-label">Coding</p>
-                <p class="content__section-txt">
-                    BEMを意識したクラス設計を採用し、保守性と再利用性を考慮しました。<br>
-                    JavaScriptでは、タイピングアニメーションやスクロール時のフェードインを実装しています。
-                </p>
-            </div>
-
-            <div class="content__section">
+<div class="content__section">
+    <p class="content__section-label">Coding</p>
+    <p class="content__section-txt">
+        BEMとSCSSを用いたクラス設計で、可読性と保守性を意識しました。パーツごと(ヘッダー、ボタン、フッター等)にファイルを分割し、管理しやすい構造にしています。<br>
+        モバイルファーストでスタイルを構築し、メディアクエリで段階的に拡張するとともに、セマンティックなHTMLで構造の分かりやすさを重視しました。
+    </p>
+</div>            <div class="content__section">
                 <p class="content__section-label">Tech Stack</p>
                 <ul class="content__tech-list">
                     <li class="content__tech-item">HTML</li>
                     <li class="content__tech-item">CSS</li>
-                    <li class="content__tech-item">JavaScript</li>
                     <li class="content__tech-item">Flexbox</li>
                     <li class="content__tech-item">CSS変数</li>
                     <li class="content__tech-item">Media Query</li>
-                </ul>
+                                        <li class="content__tech-item">BEM</li>
+                    <li class="content__tech-item">SCSS</li>
+                                    </ul>
             </div>
-
             <div class="content__section">
                 <p class="content__section-label">Links</p>
                 <div class="content__link-list">
-                    <a href="https://minamiworks.xsrv.jp/37works/" class="content__link content__link--site">View Site
+                    <a href="https://minamiworks.xsrv.jp/ster-books/" class="content__link content__link--site">View Site
                         →</a>
-                    <a href="https://github.com/minami-works/37works-portfolio/tree/main/37works"
+                    <a href="https://github.com/minami-works/ster-books"
                         class="content__link content__link--github">GitHub →</a>
                 </div>
             </div>
-
         </div>
         <footer class="footer">
             <div class="header__logo">
@@ -154,7 +146,6 @@
             </div>
 <p class="footer__copy"><small>&copy; 2026 37Works. All rights reserved.</small></p>
         </footer>
-    </main>
 </body>
 
 </html>
